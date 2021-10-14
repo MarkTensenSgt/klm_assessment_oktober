@@ -141,7 +141,7 @@ public class SceneController : MonoBehaviour
             plane.aircraftType = typeList[Random.Range(0,typeList.Count)];
             plane.hangarPosition = position + new Vector3(0, 0, 0);
             plane.airportBounds = new Vector2(fenceSizeX, fenceSizeZ);
-            plane.airplaneObject = Instantiate(PlanePrefab, position + new Vector3(0,0,-1), Quaternion.Euler(0, 180, 0), gameObject.transform);
+            plane.airplaneObject = Instantiate(PlanePrefab, position + new Vector3(0,0,-1.5f), Quaternion.Euler(0, 180, 0), gameObject.transform);
             plane.airplaneObject.GetComponent<TextMeshPro>().text = "Airplane " + i;
 
             planeList.Add(plane);
